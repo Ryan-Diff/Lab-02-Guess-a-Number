@@ -13,13 +13,19 @@
 </head>
 
 <body>
-    <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png"/>
-        </div>
-    </header>
+    <header> Welcome to my Guessing Game!</header>
     <main>
-       
+        <p>Can you guess my number in four tries? It is between 1 and 20</p>
+        <label for="number-input" > Enter your guess here: </label>
+        <input type="number" id="number-inpt" min="1" max="20">
+        <br>
+        <input type="submit" class="button" id="submit-button">
+        <br>
+        <div class="feedback">
+            <span id="tries-remaining">4 Tries-remaining!</span>
+            <br>
+            <span id ="you-guessed"></span>
+        </div>
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
