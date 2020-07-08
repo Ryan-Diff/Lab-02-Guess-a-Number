@@ -6,7 +6,6 @@ const button = document.getElementById('submit-button');
 const triesRemaining = document.getElementById('tries-remaining');
 const guessWas = document.getElementById('guess-was');
 const winLose = document.getElementById('win-loss');
-const mainBody = document.getElementById('main-body');
 const resultSection = document.getElementById('results-section');
 const resetButton = document.getElementById('reset-button');
 // set event listeners to update state and DOM
@@ -29,13 +28,11 @@ if (userGuess > 20 || userGuess <= 0) {
 const newResult = compareNumbers(userGuess, myNumber);
 
 function youWon() {
-    mainBody.style.display = 'none';
     winLose.textContent = 'Stop reading my mind!';
     resultSection.style.opacity = '1';
 }
 
 function youLost() {
-    mainBody.style.display = 'none';
     winLose.textContent = 'NOT GOOD ENOUGH!';
     resultSection.style.opacity = '1';
 }
@@ -52,9 +49,7 @@ function displayResults(lowOrHi) {
     guessWas.textContent = `Your guess was too ${lowOrHi}.`;
 }
 
-
-
-button.addEventListener('click',() => {
+button.addEventListener('click', () => {
     
     if (newResult === 0) {
         youWon;
