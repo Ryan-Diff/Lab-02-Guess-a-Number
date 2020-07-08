@@ -14,18 +14,23 @@
 
 <body>
     <header> Welcome to my Guessing Game!</header>
-    <main>
+    <main id= 'main-body'>
         <p>Can you guess my number in four tries? It is between 1 and 20</p>
         <label for="number-input" > Enter your guess here: </label>
-        <input type="number" id="number-inpt" min="1" max="20">
+        <input type="number" id="number-input" min="1" max="20">
         <br>
         <input type="submit" class="button" id="submit-button">
+        <br>
+        <input type="reset" class="button" id="reset-button">
         <br>
         <div class="feedback">
             <span id="tries-remaining">4 Tries-remaining!</span>
             <br>
-            <span id ="you-guessed"></span>
+            <span id ="guess-was"></span>
         </div>
+        <div id = "results-section"></div>
+        <div id ="win-loss"></div>
+
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>

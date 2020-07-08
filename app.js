@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import compareNumbers from '.utils.js';
+import compareNumbers from './utils.js';
 // constants
 const input = document.getElementById('number-input');
 const button = document.getElementById('submit-button');
@@ -7,7 +7,7 @@ const triesRemaining = document.getElementById('tries-remaining');
 const guessWas = document.getElementById('guess-was');
 const winLose = document.getElementById('win-loss');
 const mainBody = document.getElementById('main-body');
-const resultSection = document.getElementById('result-section');
+const resultSection = document.getElementById('results-section');
 const resetButton = document.getElementById('reset-button');
 // set event listeners to update state and DOM
 
@@ -16,8 +16,8 @@ console.log(myNumber);
 
 let remainCount = 4;
 
-function submit() {
-}
+// function submit() {
+// }
 
 const userGuess = Number(input.value);
 console.log(userGuess);
@@ -47,26 +47,28 @@ function reduceCount() {
     }
 }
 
-function displayResult(lowOrHi) {
-    triesRemaining.textContent = ('${reaminCount} tries remaining.');
+function displayResults(lowOrHi) {
+    triesRemaining.textContent = (`${remainCount} tries remaining.`);
+    guessWas.textContent = `Your guess was too ${lowOrHi}.`;
 }
 
-if (newResult === 0) {
-    youWon;
 
-}else if (newResult === -1) {
-    reduceCount();
-    displayResult('Too Low!');
-}else if (newResult === 1) {
-    reduceCount()
-    displayResult('Too High!');
-}else {
-    throw new Error('inconclusive');
+
+button.addEventListener('click',() => {
+    
+    if (newResult === 0) {
+        youWon;
+    
+    } else if (newResult === -1) {
+        reduceCount();
+        displayResults('Too Low!');
+    } else if (newResult === 1) {
+        reduceCount();
+        displayResults('Too High!');
+    } else {
+        throw new Error('inconclusive');
     }
-};
-
-button.addEventListener('click' , submit);
-
+});
 const resetPage = () => {
     const userChoice = window.confirm('Are you sure?');
 
@@ -77,4 +79,4 @@ const resetPage = () => {
     }
 };
 
-resetButton.addEventListener('click' , resetPage);
+resetButton.addEventListener('click', resetPage);
