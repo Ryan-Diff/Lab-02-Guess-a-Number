@@ -15,8 +15,6 @@ console.log(myNumber);
 
 let remainCount = 4;
 
-// function submit() {
-// }
 
 const userGuess = Number(input.value);
 console.log(userGuess);
@@ -43,12 +41,11 @@ function reduceCount() {
         youLost();
     }
 }
-
+//  Want to split this into two functions 
 function displayResults(lowOrHi) {
     triesRemaining.textContent = (`${remainCount} tries remaining.`);
     guessWas.textContent = `Your guess was too ${lowOrHi}.`;
 }
-
 button.addEventListener('click', () => {
     
     if (newResult === 0) {
