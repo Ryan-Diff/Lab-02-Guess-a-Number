@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import compareNumbers from './utils.js';
+import { compareNumbers } from './utils.js';
 // constants
 const input = document.getElementById('number-input');
 const button = document.getElementById('submit-button');
@@ -8,6 +8,7 @@ const guessWas = document.getElementById('guess-was');
 const winLose = document.getElementById('win-loss');
 const resultSection = document.getElementById('results-section');
 const resetButton = document.getElementById('reset-button');
+const numOfResets = document.getElementById('num-of-resets');
 // set event listeners to update state and DOM
 
 const myNumber = Math.ceil(Math.random() * 20);
