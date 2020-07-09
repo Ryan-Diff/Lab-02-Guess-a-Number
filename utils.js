@@ -1,4 +1,4 @@
-export default function compareNumbers(guess, myNumber) {
+export function compareNumbers(guess, myNumber) {
     if (guess === myNumber) {
         return 0;
     } else if (guess < myNumber){
